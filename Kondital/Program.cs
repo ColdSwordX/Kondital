@@ -68,12 +68,12 @@ namespace Kondital
             Console.WriteLine("hvad er deres vægt i kg ?");
             return ErDetEtTal(Console.ReadLine());
         }
-        static int Hvilepuls()
+        static int Hvilepuls()//Spørg hvad hvilepulsen er.
         {
             Console.WriteLine("Hvad er deres hvilepuls? (pulsen er slag pr. minut)");
             return ErDetEtTal(Console.ReadLine());
         }
-        static int MaksPuls()
+        static int MaksPuls()//Spørg hvad makspulsen er.
         {
             Console.WriteLine("Hvad er deres makspuls? (pulsen er slag pr. minut)");
             return ErDetEtTal(Console.ReadLine());

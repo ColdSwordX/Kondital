@@ -19,6 +19,12 @@ namespace Kondital
             double kondital = (_makspuls / _hvilepuls) * 15.3;
             return Math.Round(kondital);
         }
+        /// <summary>
+        /// Udregner Ilt optagelse 
+        /// </summary>
+        /// <param name="kondital">Det kondital som personen nu måtte have.</param>
+        /// <param name="vaegt">Vægten på person</param>
+        /// <returns>Sender et double tal tilbage med et dicimatal </returns>
         public static double BeregnIltoptagelse(double kondital, int vaegt)
         {
             return Math.Round( (kondital * vaegt) / 1000 , 1);
