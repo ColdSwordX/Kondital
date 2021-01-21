@@ -16,10 +16,12 @@ namespace Kondital
         /// <returns>Kondital ud fra de to give værdier</returns>
         public static double BeregnKondital(double _hvilepuls, double _makspuls)
         {
-            double kondital;
-            kondital = ((_makspuls / _hvilepuls) * 15.3);
-
-            return kondital;
+            double kondital = (_makspuls / _hvilepuls) * 15.3;
+            return Math.Round(kondital);
+        }
+        public static double BeregnIltoptagelse(double kondital, int vaegt)
+        {
+            return Math.Round( (kondital * vaegt) / 1000 , 1);
         }
     }
 }

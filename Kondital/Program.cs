@@ -12,7 +12,7 @@ namespace Kondital
         static int weight;
         static int restingpuls;
         static int maxpuls;
-
+        static double kondital;
         static void Main(string[] args)
         {
             Console.WriteLine("Kondital");
@@ -20,7 +20,10 @@ namespace Kondital
             weight = vaegt();
             restingpuls = Hvilepuls();
             maxpuls = MaksPuls();
-            Console.WriteLine($"Deres Kontital er: {Kondital.BeregnKondital(restingpuls, maxpuls)}");
+            kondital = Kondital.BeregnKondital(restingpuls, maxpuls);
+            Console.WriteLine($"Deres Kontital er: {kondital} ml/kg per min");
+
+            Console.WriteLine($"Deres IltOptagelse er: {Kondital.BeregnIltoptagelse(kondital, weight)} l/ml");
             Console.ReadLine();
         }
         /// <summary>
