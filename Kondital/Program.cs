@@ -12,6 +12,7 @@ namespace Kondital
         static int weight;
         static int restingpuls;
         static int maxpuls;
+
         static void Main(string[] args)
         {
             Console.WriteLine("Kondital");
@@ -19,6 +20,8 @@ namespace Kondital
             weight = vaegt();
             restingpuls = Hvilepuls();
             maxpuls = MaksPuls();
+            Console.WriteLine($"Deres Kontital er: {Kondital.BeregnKondital(restingpuls, maxpuls)}");
+            Console.ReadLine();
         }
         /// <summary>
         /// Finder ud af hvilke værdier der skal bruges når der en udregners kondital
